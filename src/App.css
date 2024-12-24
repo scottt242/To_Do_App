@@ -1,0 +1,108 @@
+/* App.css */
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+/* Title styling */
+.title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+  }
+}
+.options{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  width: 300px;
+}
+
+.options>div{
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0px 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  color: #ccc;
+  transition:  0.3s;
+  cursor: pointer;
+}
+.options>input{
+  background-color: white;
+border-radius: 4rem;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 10px 20px;
+margin-bottom: 20px;
+text-align: center;
+font-size: 20px;
+color: #ccc;
+transition: 0.3s;
+border: none;
+}
+.options>input:focus{
+  border: none;
+  outline: none;
+}
+.options>div:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f4f4f9;
+  color: black;
+}
+
+.back>input{
+  width: 40%;
+padding: 20px 40px;
+background-color: #f4f4f9;
+font-size: 22px;
+border-radius: 35px;
+margin-bottom: 20px;
+outline: none;
+box-shadow: 0 0 15px 4px inset #ccc;
+border: none;
+transition: .3s;
+
+}
+.back>input:focus{
+  border-bottom: 3px solid #2f2ee9;
+  border-radius: 0;
+  box-shadow: 0 0 0 0 inset #ccc;
+  caret-color: #2f2ee9;
+}
+.back>button{
+  width: 200px;
+font-size: 30px;
+border-radius: 4rem;
+border: none;
+padding: 5px;
+font-weight: bold;
+background-color: white;
+color: #cecece;
+outline: none;
+cursor: pointer;
+transition: .3s;
+}
+.back>button:hover{
+  background-color: #2f2ee9;
+  color: white;
+}

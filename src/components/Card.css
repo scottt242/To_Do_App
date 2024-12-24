@@ -1,0 +1,76 @@
+/* Card container for listing all to-dos */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 1;
+    transition: .5s;
+    gap: 15px; /* Space between cards */
+  }
+
+  /* Individual card styling */
+  p {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.2s ease;
+  }
+  p:first-child{
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  p:last-child{
+    width: 300px;
+
+  }
+
+  /* Hover effect on card */
+  .card:hover p {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: black;
+  }
+  .back{
+    width: 100vw;
+height: 100vh;
+z-index: 2;
+position: fixed;
+top: 0;
+left: 0;
+background-color: #000000b5;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+  }
+  .card>p:first-child::before{
+    content: "x";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: red;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .3s;
+  }
+  .card p:first-child:hover::before{
+    height: 100%;
+    opacity: 1;
+  }
+  .card.active{
+    opacity: 0;
+    transform: translateY(50px);
+  }
